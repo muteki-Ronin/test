@@ -128,24 +128,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function addInputsActive(event) {
-    const inputElement = event.target;
+  (function activeLabelElements() {
+    function addInputsActiveLabel(event) {
+      const inputElement = event.target;
 
-    if (inputElement.type !== "checkbox")
-      if (event.target.value !== "") {
-        inputElement.nextElementSibling.nextElementSibling.classList.add(
-          "form-input_label--active"
-        );
-      } else {
-        inputElement.nextElementSibling.nextElementSibling.classList.remove(
+      if (inputElement.type !== "checkbox")
+        if (event.target.value !== "") {
+          inputElement.nextElementSibling.nextElementSibling.classList.add(
+            "form-input_label--active"
+          );
+        } else {
+          inputElement.nextElementSibling.nextElementSibling.classList.remove(
+            "form-input_label--active"
+          );
+        }
+    }
+
+    formSelect.addEventListener("input", () => {
+      if (formSelect.value !== "") {
+        formSelect.nextElementSibling.nextElementSibling.classList.add(
           "form-input_label--active"
         );
       }
-  }
+    });
 
-  inputs.forEach((input) => {
-    input.addEventListener("input", addInputsActive);
-  });
+    inputs.forEach((input) => {
+      input.addEventListener("input", addInputsActiveLabel);
+    });
+  })();
 
   formSelect.addEventListener("change", searchPhone);
   form.addEventListener("submit", validateForm);
