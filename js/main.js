@@ -124,13 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
       checkboxIsValid
     ) {
       console.log("Data sent to server :-)))");
-      firstName.value = "";
-      secondName.value = "";
-      formSelect.value = "Country";
-      number.value = "";
-      password.value = "";
-      confirmPassword.value = "";
-      email.value = "";
+      form.reset();
     }
   }
 
