@@ -1,0 +1,8 @@
+[
+  { "country": "Ukraine", "tel": "+380" },
+  { "country": "USA", "tel": "+1" },
+  { "country": "Great Britain", "tel": "+44" },
+  { "country": "France", "tel": "+33" },
+  { "country": "Spain", "tel": "+34" },
+  { "country": "Italy", "tel": "+39" }
+]

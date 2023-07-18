@@ -1,0 +1,14 @@
+.footer-container {
+  color: $input-text;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  line-height: 17.78px;
+  font-weight: 300;
+  margin-top: auto;
+  padding-bottom: 56px;
+
+  & .link {
+    border-bottom: 1px solid $base-color;
+  }
+}

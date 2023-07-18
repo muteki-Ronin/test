@@ -1,0 +1,38 @@
+.header-logo {
+  margin-bottom: 30px;
+
+  @media (max-width: 360px) {
+    display: none;
+  }
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (max-width: 360px) {
+    justify-content: flex-start;
+    padding-top: 100px;
+  }
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.44px;
+  margin-bottom: 55px;
+
+  @media (max-width: 360px) {
+    font-size: 19px;
+    line-height: 22.52px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}

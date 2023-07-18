@@ -1,0 +1,175 @@
+.form-container {
+  width: 100%;
+  height: 400px;
+
+  @media (max-width: 360px) {
+    height: 740px;
+  }
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "first-name second-name"
+    "country phone"
+    "password confirm-password"
+    "email checkbox"
+    "btn";
+  gap: 30px;
+
+  @media (max-width: 360px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input-container {
+  position: relative;
+
+  & .link {
+    border-bottom: 1px solid $base-color;
+  }
+
+  & .link:hover {
+    border-bottom: 1px solid $input-text;
+  }
+}
+
+.input-box {
+  position: relative;
+}
+
+.form-input {
+  width: 300px;
+  height: 56px;
+  background-color: rgba(1, 1, 1, 0.2);
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: $input-text;
+  font-size: 19px;
+  line-height: 22.52px;
+  font-weight: 300;
+  padding-left: 50px;
+  padding-top: 22px;
+  padding-bottom: 11px;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+
+  @media (max-width: 360px) {
+    width: 330px;
+  }
+
+  &:hover {
+    border-color: $base-color;
+    transition: all 0.3s linear;
+  }
+
+  &:focus {
+    outline: none !important;
+    border-color: $base-color;
+  }
+
+  &:focus ~ .form-input_label {
+    color: $base-color;
+    font-size: 11px;
+    line-height: 13.04px;
+    top: 11px;
+  }
+}
+
+.form-input_label {
+  color: $input-text;
+  font-size: 19px;
+  line-height: 22.52px;
+  font-weight: 300;
+  position: absolute;
+  top: 17px;
+  left: 50px;
+  transition: all 0.3s linear;
+}
+
+.form-input_label--active {
+  color: $base-color;
+  font-size: 11px;
+  line-height: 13.04px;
+  top: 11px;
+}
+
+.form-input_label--active {
+  color: $base-color;
+  font-size: 11px;
+  line-height: 13.04px;
+}
+
+.input-error {
+  color: #da5050;
+  font-size: 10px;
+  line-height: 11.85px;
+  font-weight: 500;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 62px;
+  margin: 0;
+}
+
+.input-error__none {
+  display: none;
+}
+
+.form-ico {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.firstName-ico {
+  background-image: url(../icons/first_name_ico.png);
+}
+
+.secondName-ico {
+  background-image: url(../icons/second_name_ico.png);
+}
+
+.country-ico {
+  background-image: url(../icons/country_ico.png);
+}
+
+.phone-ico {
+  background-image: url(../icons/phone_ico.png);
+}
+
+.password-ico {
+  background-image: url(../icons/password_ico.png);
+}
+
+.confirmPassword-ico {
+  background-image: url(../icons/confirm_password_ico.png);
+}
+
+.email-ico {
+  background-image: url(../icons/email_ico.png);
+}
+
+.btn {
+  @media (max-width: 360px) {
+    padding-top: 15px;
+  }
+}
+
+.form-btn {
+  width: 165px;
+  height: 56px;
+  background-color: $base-color;
+  border: none;
+  border-radius: 4px;
+  font-size: 19px;
+  line-height: 22.52px;
+  font-weight: 500;
+
+  @media (max-width: 360px) {
+    width: 330px;
+  }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/index.scss">
+  <title>Authorization</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="main-container">
+
+      <div class="container">
+        <header class="header-container">
+          <img src="icons/logo.png" alt="logo" class="header-logo">
+          <p><a href="#" class="link">Sign Up</a> and find the best place to rest while traveling</p>
+        </header>
+
+        <section class="form-container">
+          <form action="#" class="form js--form">
+
+            <div class="input-container first-name">
+              <div class="input-box">
+                <input type="text" id="form-firstName" autocomplete="off" class="form-input js--first-name">
+                <p class="input-error input-error__none">The name must be more than 2 characters</p>
+                <label for="form-firstName" class="form-input_label">First Name</label>
+                <span class="form-ico firstName-ico"></span>
+              </div>
+            </div>
+
+            <div class="input-container second-name">
+              <div class="input-box">
+                <input type="text" id="form-secondName" autocomplete="off" class="form-input js--second-name">
+                <span class="form-ico secondName-ico"></span>
+                <label for="form-secondName" class="form-input_label">Second Name</label>
+              </div>
+            </div>
+
+            <div class="input-container country">
+              <div class="input-box">
+                <select name="Countries" id="form-country" class="js--countries form-input">
+                  <option value="Country"><label for="form-country" class="form-input_label">Country</label>
+                  </option>
+                </select>
+                <p class="input-error input-error__none">Fill in the field</p>
+                <span class="form-ico country-ico"></span>
+              </div>
+            </div>
+
+            <div class="input-container phone">
+              <div class="input-box">
+                <input type="tel" id="form-phone" autocomplete="off" class="form-input js--phone">
+                <p class="input-error input-error__none">Fill in the field</p>
+                <label for="form-phone" class="form-input_label">Phone</label>
+                <span class="form-ico phone-ico"></span>
+              </div>
+            </div>
+
+            <div class="input-container password">
+              <div class="input-box">
+                <input type="password" id="form-password" autocomplete="new-password" class="form-input js--password">
+                <p class="input-error input-error__none">Password must have 1 letter, 1 number and one symbol</p>
+                <label for="form-password" class="form-input_label">Password</label>
+                <span class="form-ico password-ico"></span>
+              </div>
+            </div>
+
+            <div class="input-container confirm-password">
+              <div class="input-box">
+                <input type="password" id="form-confirmPassword" autocomplete="new-password" class="form-input js--confirm-password">
+                <p class="input-error input-error__none">Password does not match</p>
+                <label for="form-confirmPassword" class="form-input_label">Confirm password</label>
+                <span class="form-ico confirmPassword-ico"></span>
+              </div>
+            </div>
+
+            <div class="input-container email">
+              <div class="input-box">
+                <input type="text" id="form-email" autocomplete="off" class="form-input js--email">
+                <p class="input-error input-error__none">Email is not correct</p>
+                <label for="form-email" class="form-input_label">Email</label>
+                <span class="form-ico email-ico"></span>
+              </div>
+            </div>
+
+            <div class="c-input input-container checkbox">
+              <div class="b-checkbox">
+                <label class="box-checkbox">
+                  <input type="checkbox" class="js--checkbox">
+                  <span class="checkbox__text"></span>
+                  <span>I agree to the <a href="#" target="_blank" class="link">Terms &
+                      Conditions</a></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="input-container btn">
+              <button type="submit" class="form-btn js--form-btn">Sign Up</button>
+            </div>
+          </form>
+
+        </section>
+      </div>
+
+      <section class="footer-container">
+        <p>If you have an account, <a href="#" class="link borer">Log In</a></p>
+      </section>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

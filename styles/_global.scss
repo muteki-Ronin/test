@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/bg-cover.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 172px;
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  overflow: hidden;
+
+  @media (max-width: 360px) {
+    background-image: url("../img/section_2-bg_forms.png"),
+      url("../img/bg-2.jpg");
+    overflow: scroll;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    padding-bottom: 0;
+    height: 1054px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
