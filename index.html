@@ -45,10 +45,10 @@
             <div class="input-container country">
               <div class="input-box">
                 <select name="Countries" id="form-country" class="js--countries form-input">
-                  <option value="Country"><label for="form-country" class="form-input_label">Country</label>
-                  </option>
+                  <option value="Country" style="display: none;"></option>
                 </select>
                 <p class="input-error input-error__none">Fill in the field</p>
+                <label for="form-country" class="form-input_label">Country</label>
                 <span class="form-ico country-ico"></span>
               </div>
             </div>
@@ -73,7 +73,8 @@
 
             <div class="input-container confirm-password">
               <div class="input-box">
-                <input type="password" id="form-confirmPassword" autocomplete="new-password" class="form-input js--confirm-password">
+                <input type="password" id="form-confirmPassword" autocomplete="new-password"
+                  class="form-input js--confirm-password">
                 <p class="input-error input-error__none">Password does not match</p>
                 <label for="form-confirmPassword" class="form-input_label">Confirm password</label>
                 <span class="form-ico confirmPassword-ico"></span>

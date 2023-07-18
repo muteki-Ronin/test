@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nameIsValid = true;
     }
 
-    if (formSelect.value === "Country") {
+    if (formSelect.value === "") {
       formSelect.nextElementSibling.classList.remove("input-error__none");
       formSelectIsValid = false;
     } else {
