@@ -49,52 +49,46 @@ document.addEventListener("DOMContentLoaded", function () {
   function validateForm(e) {
     e.preventDefault();
 
-    let nameIsValid = true;
-    let formSelectIsValid = true;
-    let numberIsValid = true;
-    let passwordIsValid = true;
-    let confirmPasswordIsValid = true;
-    let emailIsValid = true;
-    let checkboxIsValid = true;
+    let isValid = true;
 
     if (firstName.value === "" || secondName.value === "") {
       firstName.nextElementSibling.classList.remove("input-error__none");
-      nameIsValid = false;
+      isValid = false;
     } else {
       firstName.nextElementSibling.classList.add("input-error__none");
     }
 
     if (formSelect.value === "") {
       formSelect.nextElementSibling.classList.remove("input-error__none");
-      formSelectIsValid = false;
+      isValid = false;
     } else {
       formSelect.nextElementSibling.classList.add("input-error__none");
     }
 
     if (!number.value.match(/^\+?\d+$/)) {
       number.nextElementSibling.classList.remove("input-error__none");
-      numberIsValid = false;
+      isValid = false;
     } else {
       number.nextElementSibling.classList.add("input-error__none");
     }
 
     if (!password.value.match(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-zA-Z])/g)) {
       password.nextElementSibling.classList.remove("input-error__none");
-      passwordIsValid = false;
+      isValid = false;
     } else {
       password.nextElementSibling.classList.add("input-error__none");
     }
 
     if (confirmPassword.value !== password.value) {
       confirmPassword.nextElementSibling.classList.remove("input-error__none");
-      confirmPasswordIsValid = false;
+      isValid = false;
     } else {
       confirmPassword.nextElementSibling.classList.add("input-error__none");
     }
 
     if (email.value === "" || !email.value.includes("@")) {
       email.nextElementSibling.classList.remove("input-error__none");
-      emailIsValid = false;
+      isValid = false;
     } else {
       email.nextElementSibling.classList.add("input-error__none");
     }
@@ -104,18 +98,10 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       checkbox.nextElementSibling.classList.add("error-checkbox");
       checkbox.nextElementSibling.classList.remove("b-checkbox");
-      checkboxIsValid = false;
+      isValid = false;
     }
 
-    if (
-      nameIsValid &&
-      formSelectIsValid &&
-      numberIsValid &&
-      passwordIsValid &&
-      confirmPasswordIsValid &&
-      emailIsValid &&
-      checkboxIsValid
-    ) {
+    if (isValid) {
       console.log("Data sent to server :-)))");
       form.reset();
     }
