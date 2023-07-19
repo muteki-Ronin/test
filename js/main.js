@@ -49,20 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
   function validateForm(e) {
     e.preventDefault();
 
-    let nameIsValid = false;
-    let formSelectIsValid = false;
-    let numberIsValid = false;
-    let passwordIsValid = false;
-    let confirmPasswordIsValid = false;
-    let emailIsValid = false;
-    let checkboxIsValid = false;
+    let nameIsValid = true;
+    let formSelectIsValid = true;
+    let numberIsValid = true;
+    let passwordIsValid = true;
+    let confirmPasswordIsValid = true;
+    let emailIsValid = true;
+    let checkboxIsValid = true;
 
     if (firstName.value === "" || secondName.value === "") {
       firstName.nextElementSibling.classList.remove("input-error__none");
       nameIsValid = false;
     } else {
       firstName.nextElementSibling.classList.add("input-error__none");
-      nameIsValid = true;
     }
 
     if (formSelect.value === "") {
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
       formSelectIsValid = false;
     } else {
       formSelect.nextElementSibling.classList.add("input-error__none");
-      formSelectIsValid = true;
     }
 
     if (!number.value.match(/^\+?\d+$/)) {
@@ -78,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
       numberIsValid = false;
     } else {
       number.nextElementSibling.classList.add("input-error__none");
-      numberIsValid = true;
     }
 
     if (!password.value.match(/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-zA-Z])/g)) {
@@ -86,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordIsValid = false;
     } else {
       password.nextElementSibling.classList.add("input-error__none");
-      passwordIsValid = true;
     }
 
     if (confirmPassword.value !== password.value) {
@@ -94,7 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
       confirmPasswordIsValid = false;
     } else {
       confirmPassword.nextElementSibling.classList.add("input-error__none");
-      confirmPasswordIsValid = true;
     }
 
     if (email.value === "" || !email.value.includes("@")) {
@@ -102,12 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
       emailIsValid = false;
     } else {
       email.nextElementSibling.classList.add("input-error__none");
-      emailIsValid = true;
     }
 
     if (checkbox.checked) {
       checkbox.nextElementSibling.classList.remove("error-checkbox");
-      checkboxIsValid = true;
     } else {
       checkbox.nextElementSibling.classList.add("error-checkbox");
       checkbox.nextElementSibling.classList.remove("b-checkbox");
@@ -143,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     formSelect.addEventListener("input", () => {
-      if (formSelect.value !== "") {
+      if (formSelect.value.length > 2) {
         formSelect.nextElementSibling.nextElementSibling.classList.add(
           "form-input_label--active"
         );
